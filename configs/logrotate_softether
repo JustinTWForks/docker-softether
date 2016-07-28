@@ -1,0 +1,5 @@
+/var/log/sylab/network.log {
+    size 4M
+    copytruncate
+    rotate 8
+}

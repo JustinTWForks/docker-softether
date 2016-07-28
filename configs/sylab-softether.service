@@ -1,0 +1,13 @@
+[Unit]
+Description=Sylab softer vpn server
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker start -a softether
+ExecStop=/usr/bin/docker stop -t 2 softether
+
+[Install]
+#WantedBy=multi-user.target
+WantedBy=default.target
+
