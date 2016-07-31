@@ -32,13 +32,15 @@ if __name__ == "__main__":
     for argv in sys.argv:
         if argv == '-i' or argv == 'install':
             setup_log_rotation(service_name)
-            setup_systemd(service_name)
+            #setup_systemd(service_name)
+            #TODO:
+            # rc.local /usr/local/bin/docker-compose -f /opt/sylab/system/softether/docker-compose.yml up --build -d
             mk_service_dirs()
             print('insstall success !!')
             exit()
         if argv == '-u' or argv == 'uninstall':
             remove_log_rotation(service_name)
-            remove_systemd(service_name)
+            #remove_systemd(service_name)
             print('remove success !!')
             exit()
 
